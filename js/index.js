@@ -56,13 +56,15 @@ nav.forEach( (navEl, index) => {
 // Update the CTA h1
 let ctaH1 = document.querySelectorAll('section.cta > div > h1');
 ctaH1[0].textContent = siteContent['cta']['h1'];
+ctaH1[0].innerHTML = ctaH1[0].textContent.split(" ").join("<br> ");
+
 
 // Update the CTA button
-let ctaButton = Array.from(document.querySelectorAll('section.cta > div > button'));
+let ctaButton = document.querySelectorAll('section.cta > div > button');
 ctaButton[0].textContent = siteContent['cta']['button'];
 
 // Update the CTA image
-let ctaImage = Array.from(document.querySelectorAll('section.cta > img'));
+let ctaImage = document.querySelectorAll('section.cta > img');
 ctaImage[0].src = siteContent['cta']['img-src'];
 
 

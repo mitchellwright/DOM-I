@@ -95,3 +95,29 @@ topContent.forEach( (contentEl, index) => {
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+// Update contact
+let contactSection = Array.from(document.getElementsByClassName('contact')[0].children);
+
+contactSection.forEach( (el, index) => {
+  switch(index) {
+    case 0:
+      el.textContent = siteContent['contact']['contact-h4'];
+      break;
+    case 1:
+      el.textContent = siteContent['contact']['address'];
+      break;
+    case 2:
+      el.textContent = siteContent['contact']['phone'];
+      break;
+    case 3:
+      el.textContent = siteContent['contact']['email'];
+      break;
+  }
+});
+
+
+// Update footer
+let footer = document.querySelectorAll('footer > p');
+footer[0].textContent = siteContent['footer']['copyright']

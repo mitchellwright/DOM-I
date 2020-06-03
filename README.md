@@ -12,10 +12,10 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [x] Create a forked copy of this project.
+* [x] Add your project manager as collaborator on Github.
+* [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [x] Create a new branch: git checkout -b `<firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 * [ ] Push commits: git push origin `<firstName-lastName>`.
 
@@ -44,7 +44,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Stretch Goals
 
-* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
+* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer

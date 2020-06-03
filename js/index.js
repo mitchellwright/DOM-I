@@ -40,3 +40,58 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Update the title
+let title = document.getElementsByTagName('title');
+title[0].textContent = 'Great Idea!';
+
+// Update the nav bar with the proper text for each item
+let nav = Array.from(document.querySelectorAll('nav a'));
+nav.forEach( (navEl, index) => {
+  navEl.textContent = siteContent['nav'][`nav-item-${index+1}`]
+});
+
+
+// Update the CTA section
+// Update the CTA h1
+let ctaH1 = document.querySelectorAll('section.cta > div > h1');
+ctaH1[0].textContent = siteContent['cta']['h1'];
+
+// Update the CTA button
+let ctaButton = Array.from(document.querySelectorAll('section.cta > div > button'));
+ctaButton[0].textContent = siteContent['cta']['button'];
+
+// Update the CTA image
+let ctaImage = Array.from(document.querySelectorAll('section.cta > img'));
+ctaImage[0].src = siteContent['cta']['img-src'];
+
+
+// Update main content
+let topContent = Array.from(document.querySelectorAll('section.main-content > div > div.text-content'));
+topContent.forEach( (contentEl, index) => {
+  switch(index) {
+    case 0:
+      contentEl.children[0].textContent = siteContent['main-content']['features-h4'];
+      contentEl.children[1].textContent = siteContent['main-content']['features-content'];
+      break;
+    case 1:
+      contentEl.children[0].textContent = siteContent['main-content']['about-h4'];
+      contentEl.children[1].textContent = siteContent['main-content']['about-content'];
+      break;
+    case 2:
+      contentEl.children[0].textContent = siteContent['main-content']['services-h4'];
+      contentEl.children[1].textContent = siteContent['main-content']['services-content'];
+      break;
+    case 3:
+      contentEl.children[0].textContent = siteContent['main-content']['product-h4'];
+      contentEl.children[1].textContent = siteContent['main-content']['product-content'];
+      break;
+    case 4:
+      contentEl.children[0].textContent = siteContent['main-content']['vision-h4'];
+      contentEl.children[1].textContent = siteContent['main-content']['vision-content'];
+      break;
+  }
+});
+
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);

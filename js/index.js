@@ -48,8 +48,17 @@ title[0].textContent = 'Great Idea!';
 // Update the nav bar with the proper text for each item
 let nav = Array.from(document.querySelectorAll('nav a'));
 nav.forEach( (navEl, index) => {
-  navEl.textContent = siteContent['nav'][`nav-item-${index+1}`]
+  navEl.textContent = siteContent['nav'][`nav-item-${index+1}`];
+  navEl.style.color = 'green';
 });
+
+let pricing = document.createElement('a');
+pricing.textContent = 'Pricing';
+let careers = document.createElement('a');
+careers.textContent = 'Careers';
+
+document.getElementsByTagName('nav')[0].prepend(pricing);
+document.getElementsByTagName('nav')[0].appendChild(careers);
 
 
 // Update the CTA section
